@@ -6,19 +6,19 @@
 
 Вывести на экран циклом пять строк из нулей, причем каждая строка должна быть пронумерована.
 '''
-print('Задача 1')
+print('\nЗадача 1')
 for i in range(1,6):
-    print (str(i) + '.', '00000')
+    print (str(i) + '.', '0000000000')
 '''
 Задача 2
 
 Пользователь в цикле вводит 10 цифр. Найти количество введеных пользователем цифр 5.
 '''
-print('Задача 2')
+print('\nЗадача 2')
 col_5 = 0
 for i in range (10):
-    if int(input('Введите цифру:')) == 5:
-        col_5 += 1
+    if input('Введите цифру:') == '5':
+       col_5 += 1
 print('Количество цифр 5 =', col_5)
 
 '''
@@ -26,73 +26,103 @@ print('Количество цифр 5 =', col_5)
 
 Найти сумму ряда чисел от 1 до 100. Полученный результат вывести на экран.
 '''
-print('Задача 3')
+print('\nЗадача 3')
 sum_100 = 0
 for i in range(1,101):
      sum_100 += i
-print(sum_100)
+print('Сумма ряда чисел от 1 до 100 =', sum_100)
 
 '''
 Задача 4
 
 Найти произведение ряда чисел от 1 до 10. Полученный результат вывести на экран.
 '''
-print('Задача 4')
+print('\nЗадача 4')
 mul_10 = 1
 for i in range(1, 11):
     mul_10 *= i
-print(mul_10)
+print('Произведение ряда чисел от 1 до 10 =', mul_10)
 '''
 Задача 5
 
 Вывести цифры числа на каждой строчке.
 '''
-print('Задача 5')
-# integer_number = 2129
-#
-# #print(integer_number%10,integer_number//10)
-#
-# while integer_number>0:
-#     print(integer_number%10)
-#     integer_number = integer_number//10
+print('\nЗадача 5')
+number = 25664129
+print('Число -', number, '\nЦифры числа на каждой строчке:')
+str_num = str(number)
+for i in range(len(str_num)):
+    print(str_num[i])
 
 '''
 Задача 6
 
 Найти сумму цифр числа.
 '''
-print('Задача 6')
-
+print('\nЗадача 6')
+number = 12345
+sum_num = 0
+print('Число -', number)
+str_num = str(number)
+for i in range(len(str_num)):
+    sum_num += int(str_num[i])
+print('Сумма цифр числа =', sum_num)
 '''
 Задача 7
 
 Найти произведение цифр числа.
 '''
-print('Задача 7')
+print('\nЗадача 7')
+number = 12345
+mul_num = 1
+print('Число -', number)
+str_num = str(number)
+for i in range(len(str_num)):
+    mul_num *= int(str_num[i])
+print('Произведение цифр числа =', mul_num)
 '''
 Задача 8
 
 Дать ответ на вопрос: есть ли среди цифр числа 5?
 '''
-print('Задача 8')
-integer_number = 213413
-while integer_number>0:
-    if integer_number%10 == 5:
-        print('Yes')
+print('\nЗадача 8')
+number = 325344
+print('Число -', number)
+str_num = str(number)
+i = 0
+while i < len(str_num):
+    if str_num[i] == '5':
+        print('Пятёрка есть')
         break
-    integer_number = integer_number//10
-else: print('No')
+    i += 1
+else:
+    print('Пятёрки нет')
 
 '''
 Задача 9
 
 Найти максимальную цифру в числе
 '''
-print('Задача 9')
-
+print('\nЗадача 9')
+number = 1245384
+max_num = 0
+print('Число -', number)
+str_num = str(number)
+for i in range(len(str_num)):
+    if int(str_num[i]) > max_num:
+        max_num = int(str_num[i])
+print('Максимальная цифра числа =', max_num)
 '''
 Задача 10
 
 Найти количество цифр 5 в числе
 '''
-print('Задача 10')
+print('\nЗадача 10')
+number = 525354
+print('Число -', number)
+str_num = str(number)
+col_5 = 0
+for i in range (len(str_num)):
+    if str_num[i] == '5':
+        col_5 += 1
+print('Количество цифр 5 в числе = ', col_5)
